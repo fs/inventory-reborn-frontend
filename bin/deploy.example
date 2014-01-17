@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+brunch build --optimize && \
+  sudo rm -rf path_to_backed_public && \
+  sudo cp -r public/* path to rails path_to_backed_public

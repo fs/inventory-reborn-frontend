@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+sudo npm install -g bower && \
+  bower install && \
+  sudo npm install -g brunch && \
+  npm install

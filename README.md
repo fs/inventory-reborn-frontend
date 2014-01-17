@@ -3,12 +3,15 @@ This is a inventory coffee app for [Brunch](http://brunch.io/) which utilizes [M
 
 ## Getting started
 * Clone the project.
-* Install bower via nodejs: npm install -g bower
-* Install bower plugins: bower install
-* Install brunch via nodejs: npm install -g brunch
-* Install brunch plugins: npm install
-* Run brunch watch --server (or brunch build if you'll listen webserver on public/)
+* Run `sh bin/bootstrap`
+* Run `brunch watch --server` (or brunch build if you'll listen webserver on public/)
 * Open lvh.me:3333
+
+## Getting deploy
+* Copy `bin/deploy.example` to `bin/deploy`
+* Change 'path to backend public' with your backend public path
+* Deploy via: `sudo sh bin/deploy`
+
 
 ## Other
 Versions of software the skeleton uses:
