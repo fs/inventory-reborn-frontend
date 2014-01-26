@@ -1,5 +1,5 @@
+# See docs at http://brunch.readthedocs.org/en/latest/config.html.
 exports.config =
-  # See docs at http://brunch.readthedocs.org/en/latest/config.html.
   files:
     javascripts:
       defaultExtension: 'coffee'
@@ -10,7 +10,7 @@ exports.config =
     stylesheets:
       defaultExtension: 'styl'
       joinTo:
-        'stylesheets/app.css': /^app(\/|\\)views(\/|\\)styles(\/|\\)/
+        'stylesheets/app.css': /^app(\/|\\)styles(\/|\\)/
         'stylesheets/vendor.css': /^vendor(\/|\\)styles/
       order:
         before: [
