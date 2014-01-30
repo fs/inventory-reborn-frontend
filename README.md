@@ -7,12 +7,6 @@ This is a inventory coffee app for [Brunch](http://brunch.io/) which utilizes [M
 * Run `brunch watch --server` (or brunch build if you'll listen webserver on public/)
 * Open lvh.me:3333
 
-## Getting deploy
-* Copy `bin/deploy.example` to `bin/deploy`
-* Change 'path to backend public' with your backend public path
-* Deploy via: `sudo sh bin/deploy`
-
-
 ## Other
 Versions of software the skeleton uses:
 

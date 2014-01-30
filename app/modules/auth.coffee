@@ -1,14 +1,20 @@
-application = require 'application'
+Application = require 'application'
+UnauthenticatedLayout = require 'views/unauthenticated_layout'
+HomeView = require 'views/home_view'
 
-module.exports = application.module "Auth", (Mod) ->
+module.exports = Application.module "Auth", (Mod) ->
   class AuthController extends Marionette.Controller
+    home: ->
+      homeView = new HomeView()
+      Application.layout.content.show(homeView)
+
     login: ->
-      UnauthenticatedLayout = require 'views/UnauthenticatedLayout'
       @loginView = new UnauthenticatedLayout
       @loginView.render()
 
   class AuthRouter extends Marionette.AppRouter
     appRoutes:
+      '': 'home'
       'login': 'login'
 
     controller: new AuthController

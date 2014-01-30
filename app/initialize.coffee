@@ -1,9 +1,17 @@
-application = require 'application'
-auth = require 'modules/auth'
-application.addInitializer ->
-  application.module('Auth').start()
+require 'lib/template_renderer'
+require 'modules/auth'
+Application = require 'application'
+AppLayout = require 'views/app_layout'
+
+Application.on "initialize:after", (options) ->
+  Backbone.history.start()
+  # Freeze the object
+  Object.freeze? this
+
+Application.addInitializer ->
+  Application.layout = new AppLayout()
+  Application.layout.render()
+  Application.module('Auth').start()
 
 $ ->
-  application.initialize()
-
-
+  Application.start()
